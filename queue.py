@@ -20,18 +20,19 @@ class Queue:
         self.limit = limit
         self.length = 0
 
-    def peek(self):
-        return self.front
 
     def is_full(self):
         return self.length == self.limit
+
+    def peek(self):
+        return self.front
 
     def is_empty(self):
         return self.length == 0
 
     def enqueue(self, data):
         if self.is_full():
-            print("No more space!")
+            print("no space!")
         else:
             new_node = Node(data)
             if self.is_empty():
@@ -50,34 +51,29 @@ class Queue:
             self.length -= 1
             return removed_node.get_data()
 
-print("You're all here to bend the knee, so get in line...")
-# Creating a Queue instance
-throne_room = Queue()
 
-throne_room.enqueue("Jon Snow")
-throne_room.enqueue("Arya Stark")
-throne_room.enqueue("Tyrion Lannister")
-throne_room.enqueue("Daenerys Targaryen")
-throne_room.enqueue("Sansa Stark")
-throne_room.enqueue("Ygritte")
-throne_room.enqueue("Brienne of Tarth")
-throne_room.enqueue("Tormund GiantsBane")
-throne_room.enqueue("Oberyn Martel")
-throne_room.enqueue("Margaery Tyrell")
 
-# Queue Overflow
-throne_room.enqueue("Theon Greyjoy")
+first_room = Queue()
 
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
-print(throne_room.dequeue())
+first_room.enqueue("khalid")
+first_room.enqueue("ahmed")
+first_room.enqueue("mohammed")
+first_room.enqueue("gfhsgh")
+first_room.enqueue("dfgdgh")
+first_room.enqueue("njjkdgtj")
+first_room.enqueue("sfjfrhj")
+first_room.enqueue("jyutkyukuk")
+first_room.enqueue("nj")
+first_room.enqueue("sfjfrh")
+first_room.enqueue("jyutkyuku")
 
-# Queue Underflow
-print(throne_room.dequeue())
+
+print(first_room.dequeue())
+print(first_room.dequeue())
+print(first_room.dequeue())
+print(first_room.dequeue())
+print(first_room.dequeue())
+print(first_room.dequeue())
+print(first_room.dequeue())
+print(first_room.dequeue())
+print(first_room.dequeue())
